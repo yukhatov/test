@@ -23,12 +23,12 @@ $('#button-save').on('click', function(e) {
 
     e.preventDefault();
 });
-
+//подставляем результат
 function showResult(number)
 {
     document.getElementById('label-result').innerHTML = 'Result: ' + number;
 }
-
+// проверяем на валидность
 function validate(value){
     if(isNaN(value)){
         return false
@@ -42,7 +42,7 @@ function validate(value){
 
     return false;
 }
-
+// проверяем на валидность и показываем новые поля
 function check(value, id){
 
     var nextElement = document.getElementById(id);
@@ -73,3 +73,12 @@ function check(value, id){
         }
     }
 }
+// запрещаем отправку форму по enter
+$(document).ready(function() {
+    $('#w0').keydown(function(event){
+        if(event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+        }
+    });
+});
