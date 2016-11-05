@@ -47,6 +47,19 @@ function check(value, id){
 
     var nextElement = document.getElementById(id);
 
+    if(id == 'second')
+    {
+        var thirdElement = document.getElementById('third');
+
+        if(!validate(value))
+        {
+            if(thirdElement.style.display == '')
+            {
+                thirdElement.style.display = 'none';
+            }
+        }
+    }
+
     if(validate(value))
     {
         if(nextElement.style.display == 'none')
