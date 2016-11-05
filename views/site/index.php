@@ -12,18 +12,18 @@ $this->registerJsFile('operation.js', ['yii\web\JqueryAsset']);
 
             <?php $form = ActiveForm::begin(); ?>
 
-                <div id="first" class="col-sm-6 col-md-4">
+                <div id="first" class="col-sm-6 col-md-3">
                     <?= $form->field($model, 'firstNumber') ?>
                 </div>
 
-                <div id="second" style="display: none;" class="col-sm-6 col-md-4">
+                <div id="second" style="display: none;" class="col-sm-6 col-md-3">
                     <?= $form->field($model, 'secondNumber') ?>
                 </div>
 
-                <div id="third" class="form-group" style="display: none;" class="col-sm-6 col-md-4">
-                    <?= Html::submitButton('Add', ['class' => 'btn btn-primary', 'id' => 'button-save']) ?>
+                <div id="third" class="form-group" style="display: none;">
+                    <?= Html::submitButton('Add', ['class' => 'btn btn-primary col-sm-6 col-md-3', 'id' => 'button-save']) ?>
 
-                    <?= Html::label('Result:', null, ['id' => 'label-result']) ?>
+                    <?= Html::label('Result:', null, ['class' => 'col-sm-6 col-md-3', 'id' => 'label-result']) ?>
                 </div>
 
             <?php ActiveForm::end(); ?>
