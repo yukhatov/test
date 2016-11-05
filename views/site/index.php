@@ -7,21 +7,29 @@ $this->registerJsFile('operation.js', ['yii\web\JqueryAsset']);
 
 <div class="site-index">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <div class="container">
+        <div class="row">
 
-        <?= $form->field($model, 'firstNumber') ?>
+            <?php $form = ActiveForm::begin(); ?>
 
-        <div id="second" style="display: none;">
-            <?= $form->field($model, 'secondNumber') ?>
-        </div>
+                <div id="first" class="col-sm-6 col-md-4">
+                    <?= $form->field($model, 'firstNumber') ?>
+                </div>
 
-        <div id="third" class="form-group" style="display: none;">
-            <?= Html::submitButton('Add', ['class' => 'btn btn-primary', 'id' => 'button-save']) ?>
+                <div id="second" style="display: none;" class="col-sm-6 col-md-4">
+                    <?= $form->field($model, 'secondNumber') ?>
+                </div>
 
-            <?= Html::label('Result:', null, ['id' => 'label-result']) ?>
-        </div>
+                <div id="third" class="form-group" style="display: none;" class="col-sm-6 col-md-4">
+                    <?= Html::submitButton('Add', ['class' => 'btn btn-primary', 'id' => 'button-save']) ?>
 
-    <?php ActiveForm::end(); ?>
+                    <?= Html::label('Result:', null, ['id' => 'label-result']) ?>
+                </div>
+
+            <?php ActiveForm::end(); ?>
+
+         </div>
+    </div>
 
 </div>
 
